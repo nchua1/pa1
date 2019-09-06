@@ -1,3 +1,8 @@
+/*
+Is used for each word to play Hangman. Has play function, functions to check if words were used already or if
+the user wins, and a function to update the output or display.
+ */
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -54,7 +59,7 @@ public class Word
         }
     }
 
-    //Function to check if word was discovered/game was won
+    //Function to check if word was discovered/game was won, returns boolean
     public boolean winCheck()
     {
         for (int i=0; i<numLetters; i++)
@@ -67,7 +72,7 @@ public class Word
         return true;
     }
 
-    //Function to check if world was already used, and checks for valid inputs
+    //Function to check if world was already used, and checks for valid inputs, returns boolean
     public boolean alreadyUsed()
     {
         for (int i=0; i<26; i++)
@@ -78,6 +83,7 @@ public class Word
         return false;
     }
 
+    //no return. Main function used to play hangman.
     public void playHangman()
     {
         Scanner tempScanner = new Scanner(System.in);
